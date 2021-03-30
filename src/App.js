@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import CakeContainer from "./components/CakeContainer";
+
+import { Provider } from "react-redux";
+import store from "./redux/store";
+import HookCakeContainer from "./components/HookCakeContainer";
+import IcecreamContainer from "./components/IcecreamContainer";
+import HookIcecreamContainer from "./components/HookIcecreamContainer";
+import MilkteaContainer from "./components/MilkteaContainer";
+import HookMilktea from "./components/HookMilktea";
+import DonutContainer from "./components/DonutContainer";
+import HookDonut from "./components/HookDonut";
+import NewCakeContainer from "./components/NewCakeContainer";
+import NewHookCake from "./components/NewHookCake";
+import ItemContainer from "./components/ItemContainer";
+import UserContainer from "./components/UserContainer";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<Provider store={store}>
+			<div className="App">
+				{/* <ItemContainer cake /> */}
+				{/* <ItemContainer /> */}
+				{/* <CakeContainer alvin="ALVIN" /> */}
+				{/* <HookCakeContainer /> */}
+				{/* <IcecreamContainer /> */}
+				{/* <HookIcecreamContainer />
+				<MilkteaContainer />
+				<HookMilktea />
+				<DonutContainer />
+				<HookDonut /> */}
+				{/* <NewCakeContainer /> */}
+				{/* <NewHookCake /> */}
+				<UserContainer />
+			</div>
+		</Provider>
+	);
 }
 
 export default App;
